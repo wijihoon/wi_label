@@ -66,6 +66,8 @@ developer flow
 1. 서비 기동 시 주식정보 csv파일에서 읽어 redis set sorted 인-메모리 저장
 2. "많이 본", "많이 오른", "많이 내린", "거래량 많은", "조건별 상위 5선" API 구현 (내림차순 페이징 처리 = zrevrangebyscore key startindex endindex)
 > https://cantcoding.tistory.com/82 (redis 구현)
+> ZSetOperations<String, Object> zSetOperations = redisTemplate.opsForZSet();
+> zSetOperations.add("Key", "Value", score);
 3. 순위를 랜덤하게 변경할 수 있는 API (redis zadd하여 이존 score 정보 수정)
 4. 3번 사항 시행시마다 클라이언트 정보 전달 (Spring WebSocket 적용)
 
