@@ -1,0 +1,7 @@
+-- MySQL
+SELECT COUNT(A.NAME)
+  FROM (
+        SELECT DISTINCT(NAME) AS NAME
+          FROM ANIMAL_INS
+         WHERE NAME IS NOT NULL
+       ) A
