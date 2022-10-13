@@ -1,4 +1,4 @@
--- Orcle
+-- MySQL
 SELECT ANIMAL_ID
      , NAME
      , SEX_UPON_INTAKE
