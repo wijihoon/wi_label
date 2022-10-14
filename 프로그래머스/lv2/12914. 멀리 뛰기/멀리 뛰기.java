@@ -1,7 +1,4 @@
 class Solution {
-    static int N;
-    static long sum, answer;
-    
     public long solution(int n) {
         long[] longArr = new long[2001];
         longArr[1] = 1;
