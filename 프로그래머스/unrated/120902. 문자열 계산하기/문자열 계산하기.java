@@ -3,18 +3,17 @@ class Solution {
         int answer = 0;
         String operator = "";
         String[] strArr = my_string.split(" ");
+        answer = Integer.parseInt(strArr[0]);
         
-        for(String str : strArr){
-            if("+".equals(str) || "-".equals(str)){
-                operator = str;
-            }else{
+        for(int i = 1; i < strArr.length; i++){
+            if(i % 2 == 0){
                 if("+".equals(operator)){
-                    answer += Integer.parseInt(str);
-                }else if("-".equals(operator)){
-                    answer -= Integer.parseInt(str);
+                    answer += Integer.parseInt(strArr[i]);
                 }else{
-                    answer = Integer.parseInt(str);
+                    answer -= Integer.parseInt(strArr[i]);
                 }
+            }else{
+               operator = strArr[i]; 
             }
         }
         return answer;
