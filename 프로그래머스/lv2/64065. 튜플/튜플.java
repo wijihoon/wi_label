@@ -4,9 +4,7 @@ import java.util.ArrayList;
 class Solution {
     public int[] solution(String s) {
         
-        s = s.replaceAll("\\{\\{", "").replaceAll("\\}\\}", "");
-        
-        String[] strArr = s.split("\\},\\{");
+        String[] strArr = s.replaceAll("\\{\\{", "").replaceAll("\\}\\}", "").split("\\},\\{");
         
         strArr = Arrays.stream(strArr).sorted((o1, o2) -> {
                                                 return o1.length() - o2.length();
