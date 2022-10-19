@@ -29,7 +29,14 @@
 
 계층을 나눈 이유 : 통신이 일어나는 과정을 단계별로 알 수 있고, 문제가 생기면 그 단계만 수정하면 된다.  
 
-[TCP/IP 모델](https://backtony.github.io/interview/2021-09-30-interview-2/)
+Application Layer : HTTPS 프로토콜을 사용하여 데이터를 감싸고 Transport Layer로 내린다.
+Transport Layer : TCP인지 UDP인지에 대한 정보, 출발지와 도착지에 대한 포트정보를 헤더에 넣고 캡슐화한다. 이 결과물을 세그먼트 라고 한다.
+Network Layer : 출발지와 도착지에 대한 IP정보를 헤더로 만들어 붙인다. 이 결과물을 패킷 이라고 한다.
+Data Link Layer : 출발지의 Mac 주소와 가장 가까운 라우터의 맥주소를 붙인다. 이 결과물을 Frame 이라고 한다.
+도착지에 대한 맥주소를 넣지 않는 이유는 출발지는 처음에 도착지에 대한 맥주소를 알지 못한다.
+DHCP와 ARP()를 통해서 라우터의 IP를 받고 맥주소로 변환한 후에 헤더에 넣는다.
+앞쪽에 Trailer가 붙게 되는데 이건 오류제어를 위한 정보가 담긴다.
+Physical Layer : 전기신호로 변환하여 전송한다.
 
 
 </details>
